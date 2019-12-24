@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SharpRemote.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:SharpRemote.ViewModels"
+    mc:Ignorable="d">
+
+    <ContentPage.BindingContext>
+        <viewModels:MainPageViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <Grid
+            ColumnSpacing="5"
+            RowSpacing="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Button
+                Grid.Row="0"
+                Grid.Column="0"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="01"
+                Text="1" />
+            <Button
+                Grid.Row="0"
+                Grid.Column="1"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="02"
+                Text="2" />
+            <Button
+                Grid.Row="0"
+                Grid.Column="2"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="03"
+                Text="3" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="0"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="04"
+                Text="4" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="1"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="05"
+                Text="5" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="2"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="06"
+                Text="6" />
+            <Button
+                Grid.Row="2"
+                Grid.Column="0"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="07"
+                Text="7" />
+            <Button
+                Grid.Row="2"
+                Grid.Column="1"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="08"
+                Text="8" />
+            <Button
+                Grid.Row="2"
+                Grid.Column="2"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="09"
+                Text="9" />
+            <Button
+                Grid.Row="3"
+                Grid.Column="0"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="10"
+                Text="." />
+            <Button
+                Grid.Row="3"
+                Grid.Column="1"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="00"
+                Text="0" />
+            <Button
+                Grid.Row="3"
+                Grid.Column="2"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="11"
+                Text="ENT" />
+        </Grid>
+    </ScrollView>
+
+
+
+</ContentPage>
