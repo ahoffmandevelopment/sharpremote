@@ -1,31 +1,34 @@
-﻿using System;
+﻿using SharpRemote.Services.Interfaces;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace SharpRemote
 {
     public partial class App : Application
     {
+        private readonly ITcpService tcpService;
+
         public App()
         {
             InitializeComponent();
 
             MainPage = new MainPage();
+
+            tcpService = DependencyService.Resolve<ITcpService>();
         }
 
-        protected override void OnStart()
+        protected override async void OnStart()
         {
-            // Handle when your app starts
+            await tcpService.ConnectToClientAsync();
         }
 
-        protected override void OnSleep()
+        protected override async void OnSleep()
         {
-            // Handle when your app sleeps
+            await tcpService.DisconnecFromClientAsync();
         }
 
-        protected override void OnResume()
+        protected override async void OnResume()
         {
-            // Handle when your app resumes
+            await tcpService.ConnectToClientAsync();
         }
     }
 }
