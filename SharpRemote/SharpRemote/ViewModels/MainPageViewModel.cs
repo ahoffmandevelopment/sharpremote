@@ -3,6 +3,7 @@ using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using SharpRemote.Extensions;
 
 namespace SharpRemote.ViewModels
 {
@@ -27,9 +28,7 @@ namespace SharpRemote.ViewModels
             {
                 vibrateService.Vibrate(50);
 
-                var command = $"RCKY{parameter}  \r";
-
-                await tcpService.WriteAsync(command);
+                await tcpService.WriteAsync($"RCKY{parameter}".ToSharpCommandString());
             }
             catch (Exception)
             {
