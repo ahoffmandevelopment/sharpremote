@@ -9,13 +9,16 @@
     mc:Ignorable="d" Padding="5">
 
     <ContentPage.BindingContext>
-        <viewModels:MainPageViewModel />
+        <viewModels:RemotePageViewModel />
     </ContentPage.BindingContext>
 
     <ContentPage.ToolbarItems>
         <ToolbarItem
             Command="{Binding KeypadPressedCommand}"
             IconImageSource="keypad_black" />
+        <ToolbarItem
+            Command="{Binding RefreshConnectionPressedCommand}"
+            IconImageSource="refresh_black" />
     </ContentPage.ToolbarItems>
     <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
         <Button

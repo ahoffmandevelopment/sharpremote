@@ -115,7 +115,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\refresh_black.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SharpRemote\SharpRemote.csproj">
       <Project>{19F234FE-E997-45DD-BC04-3F3469D38209}</Project>

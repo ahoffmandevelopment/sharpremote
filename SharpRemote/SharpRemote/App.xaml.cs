@@ -24,7 +24,7 @@ namespace SharpRemote
 
         protected override async void OnSleep()
         {
-            await tcpService.DisconnecFromClientAsync();
+            await tcpService.DisconnectFromClientAsync();
         }
 
         protected override async void OnResume()

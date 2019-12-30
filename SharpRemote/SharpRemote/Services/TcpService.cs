@@ -26,12 +26,19 @@ namespace SharpRemote.Services
             await client.ConnectAsync(ADDRESS, PORT);
         }
 
-        public async Task DisconnecFromClientAsync()
+        public async Task DisconnectFromClientAsync()
         {
             if (client.Socket.Connected)
             {
                 await client.DisconnectAsync();
             }
+        }
+
+        public async Task RefreshConnectionAsync()
+        {
+            await DisconnectFromClientAsync();
+
+            await ConnectToClientAsync();
         }
 
         public async Task WriteAsync(string data)
