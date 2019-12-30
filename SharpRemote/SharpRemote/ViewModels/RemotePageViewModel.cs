@@ -1,59 +1,41 @@
-﻿using SharpRemote.Services.Interfaces;
-using System;
+﻿using Rg.Plugins.Popup.Contracts;
+using Rg.Plugins.Popup.Services;
+using SharpRemote.Views;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
-using SharpRemote.Extensions;
-using SharpRemote.Views;
 
 namespace SharpRemote.ViewModels
 {
-    public class RemotePageViewModel
+    public class RemotePageViewModel : BaseViewModel
     {
-        private readonly ITcpService tcpService;
-        private readonly IVibrateService vibrateService;
+        private readonly IPopupNavigation popupNavigation;
 
         public RemotePageViewModel()
         {
-            tcpService = DependencyService.Resolve<ITcpService>();
-            vibrateService = DependencyService.Resolve<IVibrateService>();
+            popupNavigation = PopupNavigation.Instance;
 
             WireupCommands();
         }
 
-        public ICommand ButtonPressedCommand { get; private set; }
-
         public ICommand KeypadPressedCommand { get; private set; }
 
-        public ICommand RefreshConnectionPressedCommand { get; private set; } 
-
-        private async Task OnButtonPressedAsync(string parameter)
-        {                  
-            try
-            {
-                vibrateService.Vibrate(50);
-
-                await tcpService.WriteAsync($"RCKY{parameter}".ToSharpCommandString());
-            }
-            catch (Exception)
-            {
-
-            }            
-        }
+        public ICommand RefreshConnectionPressedCommand { get; private set; }        
         
         private async Task OnKeypadPressedAsync()
         {
-            await Rg.Plugins.Popup.Services.PopupNavigation.Instance.PushAsync(new KeypadPage(), false);
+            vibrateService.Vibrate(50);
+            await popupNavigation.PushAsync(new KeypadPage(), false);
         }
 
         private async Task OnRefreshConnectionPressedAsync()
         {
+            vibrateService.Vibrate();
             await tcpService.RefreshConnectionAsync();
         }
 
         private void WireupCommands()
-        {
-            ButtonPressedCommand = new Command<string>(async (parameter) => await OnButtonPressedAsync(parameter));
+        {            
             KeypadPressedCommand = new Command(async () => await OnKeypadPressedAsync());
             RefreshConnectionPressedCommand = new Command(async () => await OnRefreshConnectionPressedAsync());
         }

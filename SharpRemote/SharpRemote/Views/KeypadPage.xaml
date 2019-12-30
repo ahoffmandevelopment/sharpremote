@@ -6,9 +6,15 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:viewModels="clr-namespace:SharpRemote.ViewModels"
     CloseWhenBackgroundIsClicked="True"
     IsAnimationEnabled="False"
     mc:Ignorable="d">
+
+    <ContentPage.BindingContext>
+        <viewModels:BaseViewModel />
+    </ContentPage.BindingContext>
+    
     <Frame
         BackgroundColor="White"
         BorderColor="Black"
