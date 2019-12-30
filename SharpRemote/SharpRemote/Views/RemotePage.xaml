@@ -3,10 +3,8 @@
     x:Class="SharpRemote.Views.RemotePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModels="clr-namespace:SharpRemote.ViewModels"
-    mc:Ignorable="d" Padding="5">
+    Padding="5">
 
     <ContentPage.BindingContext>
         <viewModels:RemotePageViewModel />
@@ -20,7 +18,11 @@
             Command="{Binding RefreshConnectionPressedCommand}"
             IconImageSource="refresh_black" />
     </ContentPage.ToolbarItems>
-    <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+    
+    <StackLayout
+        HorizontalOptions="FillAndExpand"
+        Orientation="Vertical"
+        VerticalOptions="FillAndExpand">
         <Button
             BackgroundColor="Red"
             Command="{Binding ButtonPressedCommand}"
@@ -28,7 +30,10 @@
             Text="POWER"
             TextColor="White"
             VerticalOptions="Start" />
-        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+        <StackLayout
+            HorizontalOptions="CenterAndExpand"
+            Orientation="Horizontal"
+            VerticalOptions="CenterAndExpand">
             <Button
                 Command="{Binding ButtonPressedCommand}"
                 CommandParameter="27"
@@ -46,9 +51,10 @@
                 CommandParameter="30"
                 Text="FLASHBACK" />
         </StackLayout>
-        <Grid VerticalOptions="CenterAndExpand"
+        <Grid
             ColumnSpacing="5"
-            RowSpacing="5">
+            RowSpacing="5"
+            VerticalOptions="CenterAndExpand">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
@@ -101,9 +107,10 @@
                 VerticalOptions="Center" />
 
         </Grid>
-        <Grid VerticalOptions="CenterAndExpand"
+        <Grid
             ColumnSpacing="5"
-            RowSpacing="5">
+            RowSpacing="5"
+            VerticalOptions="CenterAndExpand">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />

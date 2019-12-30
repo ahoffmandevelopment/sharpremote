@@ -30,7 +30,7 @@ namespace SharpRemote.ViewModels
 
         private async Task OnRefreshConnectionPressedAsync()
         {
-            vibrateService.Vibrate();
+            vibrateService.Vibrate(50);
             await tcpService.RefreshConnectionAsync();
         }
 
