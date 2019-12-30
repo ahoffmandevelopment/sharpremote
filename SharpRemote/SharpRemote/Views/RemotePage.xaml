@@ -18,18 +18,29 @@
             Command="{Binding RefreshConnectionPressedCommand}"
             IconImageSource="refresh_black" />
     </ContentPage.ToolbarItems>
-    
+
     <StackLayout
         HorizontalOptions="FillAndExpand"
         Orientation="Vertical"
         VerticalOptions="FillAndExpand">
-        <Button
-            BackgroundColor="Red"
-            Command="{Binding ButtonPressedCommand}"
-            CommandParameter="12"
-            Text="POWER"
-            TextColor="White"
-            VerticalOptions="Start" />
+        <StackLayout
+            HorizontalOptions="FillAndExpand"
+            Orientation="Horizontal"
+            VerticalOptions="CenterAndExpand">
+            <Button
+                BackgroundColor="Red"
+                Command="{Binding PowerOnPressedCommand}"
+                HorizontalOptions="StartAndExpand"
+                Text="POWER ON"
+                TextColor="White" />
+            <Button
+                BackgroundColor="Red"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="12"
+                HorizontalOptions="End"
+                Text="POWER OFF"
+                TextColor="White" />
+        </StackLayout>
         <StackLayout
             HorizontalOptions="CenterAndExpand"
             Orientation="Horizontal"
