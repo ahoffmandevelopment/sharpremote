@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+    x:Class="SharpRemote.Views.KeypadPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    CloseWhenBackgroundIsClicked="True"
+    IsAnimationEnabled="False"
+    mc:Ignorable="d">
+    <Frame
+        BackgroundColor="White"
+        BorderColor="Black"
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+        <Grid
+            ColumnSpacing="5"
+            RowSpacing="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Button
+                Grid.Row="0"
+                Grid.Column="0"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="01"
+                FontSize="Large"
+                Text="1" />
+            <Button
+                Grid.Row="0"
+                Grid.Column="1"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="02"
+                FontSize="Large"
+                Text="2" />
+            <Button
+                Grid.Row="0"
+                Grid.Column="2"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="03"
+                FontSize="Large"
+                Text="3" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="0"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="04"
+                FontSize="Large"
+                Text="4" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="1"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="05"
+                FontSize="Large"
+                Text="5" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="2"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="06"
+                FontSize="Large"
+                Text="6" />
+            <Button
+                Grid.Row="2"
+                Grid.Column="0"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="07"
+                FontSize="Large"
+                Text="7" />
+            <Button
+                Grid.Row="2"
+                Grid.Column="1"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="08"
+                FontSize="Large"
+                Text="8" />
+            <Button
+                Grid.Row="2"
+                Grid.Column="2"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="09"
+                FontSize="Large"
+                Text="9" />
+            <Button
+                Grid.Row="3"
+                Grid.Column="0"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="10"
+                FontSize="Large"
+                Text="." />
+            <Button
+                Grid.Row="3"
+                Grid.Column="1"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="00"
+                FontSize="Large"
+                Text="0" />
+            <Button
+                Grid.Row="3"
+                Grid.Column="2"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="11"
+                FontSize="Large"
+                Text="ENT" />
+        </Grid>
+    </Frame>
+</pages:PopupPage>

@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SharpRemote.Views.RemotePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:SharpRemote.ViewModels"
+    mc:Ignorable="d" Padding="5">
+
+    <ContentPage.BindingContext>
+        <viewModels:MainPageViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Command="{Binding KeypadPressedCommand}"
+            IconImageSource="keypad_black" />
+    </ContentPage.ToolbarItems>
+    <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <Button
+            BackgroundColor="Red"
+            Command="{Binding ButtonPressedCommand}"
+            CommandParameter="12"
+            Text="POWER"
+            TextColor="White"
+            VerticalOptions="Start" />
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+            <Button
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="27"
+                Text="CC" />
+            <Button
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="28"
+                Text="AV MODE" />
+            <Button
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="29"
+                Text="VIEW MODE" />
+            <Button
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="30"
+                Text="FLASHBACK" />
+        </StackLayout>
+        <Grid VerticalOptions="CenterAndExpand"
+            ColumnSpacing="5"
+            RowSpacing="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Button
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.Column="0"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="31"
+                Text="Mute"
+                VerticalOptions="Center" />
+            <Button
+                Grid.Row="0"
+                Grid.Column="1"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="33"
+                Text="VOL+" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="1"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="32"
+                Text="VOL-" />
+            <Button
+                Grid.Row="0"
+                Grid.Column="2"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="34"
+                Text="CH+" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="2"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="35"
+                Text="CH-" />
+            <Button
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.Column="3"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="36"
+                Text="INPUT"
+                VerticalOptions="Center" />
+
+        </Grid>
+        <Grid VerticalOptions="CenterAndExpand"
+            ColumnSpacing="5"
+            RowSpacing="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Button
+                Grid.Row="0"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="38"
+                Text="MENU" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="0"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="58"
+                Text="2D/3D" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="4"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="39"
+                Text="SMART CENTRAL" />
+            <Button
+                Grid.Row="1"
+                Grid.Column="2"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="41"
+                Text="▲" />
+            <Button
+                Grid.Row="2"
+                Grid.Column="1"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="43"
+                Text="◄" />
+            <Button
+                Grid.Row="2"
+                Grid.Column="2"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="40"
+                Text="" />
+            <Button
+                Grid.Row="2"
+                Grid.Column="3"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="44"
+                Text="►" />
+            <Button
+                Grid.Row="3"
+                Grid.Column="2"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="42"
+                Text="▼" />
+            <Button
+                Grid.Row="3"
+                Grid.Column="0"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="46"
+                Text="EXIT" />
+            <Button
+                Grid.Row="3"
+                Grid.Column="4"
+                Command="{Binding ButtonPressedCommand}"
+                CommandParameter="45"
+                Text="RETURN" />
+        </Grid>
+        <Button
+            BackgroundColor="Red"
+            Command="{Binding ButtonPressedCommand}"
+            CommandParameter="59"
+            Text="NETFLIX"
+            TextColor="White"
+            VerticalOptions="End" />
+    </StackLayout>
+</ContentPage>
