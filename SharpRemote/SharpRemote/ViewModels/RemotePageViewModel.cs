@@ -36,7 +36,7 @@ namespace SharpRemote.ViewModels
             vibrateService.Vibrate(50);
 
             // Sends command to open up the port, slight delay, then sends the power on command.
-            await tcpService.WriteAsync("RSPW1".ToSharpCommandString());
+            await tcpService.WriteAsync("RSPW2".ToSharpCommandString());
             await Task.Delay(300);
             await tcpService.WriteAsync("POWR1".ToSharpCommandString());
         }

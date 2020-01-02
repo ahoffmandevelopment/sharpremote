@@ -88,6 +88,8 @@ namespace SharpRemote.ViewModels
                 .OrderBy(gb => gb.Name)
                 .ToList()
                 .ForEach(gb => Shortcuts.Add(gb));
+
+            groupedButtons = null;
         }
     }
 }

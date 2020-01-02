@@ -21,191 +21,193 @@
             IconImageSource="refresh_black" />
     </ContentPage.ToolbarItems>
 
-    <StackLayout
-        HorizontalOptions="FillAndExpand"
-        Orientation="Vertical"
-        VerticalOptions="FillAndExpand">
+    <ScrollView>
         <StackLayout
             HorizontalOptions="FillAndExpand"
-            Orientation="Horizontal"
-            VerticalOptions="CenterAndExpand">
-            <Button
-                BackgroundColor="Red"
-                Command="{Binding PowerOnPressedCommand}"
-                HorizontalOptions="StartAndExpand"
-                Text="POWER ON"
-                TextColor="White" />
-            <Button
-                BackgroundColor="Red"
-                Command="{Binding ButtonPressedCommand}"
-                CommandParameter="RCKY12"
-                HorizontalOptions="End"
-                Text="POWER OFF"
-                TextColor="White" />
-        </StackLayout>
-        <StackLayout
-            HorizontalOptions="CenterAndExpand"
-            Orientation="Horizontal"
-            VerticalOptions="CenterAndExpand">
-            <Button
-                Command="{Binding ButtonPressedCommand}"
-                CommandParameter="RCKY27"
-                Text="CC" />
-            <Button
-                Command="{Binding ButtonPressedCommand}"
-                CommandParameter="RCKY28"
-                Text="AV MODE" />
-            <Button
-                Command="{Binding ButtonPressedCommand}"
-                CommandParameter="RCKY29"
-                Text="VIEW MODE" />
-            <Button
-                Command="{Binding ButtonPressedCommand}"
-                CommandParameter="RCKY30"
-                Text="FLASHBACK" />
-        </StackLayout>
-        <Grid
-            ColumnSpacing="5"
-            RowSpacing="5"
-            VerticalOptions="CenterAndExpand">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <Button
-                Grid.Row="0"
-                Grid.RowSpan="2"
-                Grid.Column="0"
-                Command="{Binding ButtonPressedCommand}"
-                CommandParameter="RCKY31"
-                Text="Mute"
-                VerticalOptions="Center" />
-            <Button
-                Grid.Row="0"
-                Grid.Column="1"
-                Command="{Binding ButtonPressedCommand}"
-                CommandParameter="RCKY33"
-                Text="VOL+" />
-            <Button
-                Grid.Row="1"
-                Grid.Column="1"
-                Command="{Binding ButtonPressedCommand}"
-                CommandParameter="RCKY32"
-                Text="VOL-" />
-            <Button
-                Grid.Row="0"
-                Grid.Column="2"
-                Command="{Binding ButtonPressedCommand}"
-                CommandParameter="RCKY34"
-                Text="CH+" />
-            <Button
-                Grid.Row="1"
-                Grid.Column="2"
-                Command="{Binding ButtonPressedCommand}"
-                CommandParameter="RCKY35"
-                Text="CH-" />
-            <Button
-                Grid.Row="0"
-                Grid.RowSpan="2"
-                Grid.Column="3"
-                Command="{Binding ButtonPressedCommand}"
-                CommandParameter="RCKY36"
-                Text="INPUT"
-                VerticalOptions="Center" />
+            Orientation="Vertical"
+            VerticalOptions="FillAndExpand">
+            <StackLayout
+                HorizontalOptions="FillAndExpand"
+                Orientation="Horizontal"
+                VerticalOptions="CenterAndExpand">
+                <Button
+                    BackgroundColor="Red"
+                    Command="{Binding PowerOnPressedCommand}"
+                    HorizontalOptions="StartAndExpand"
+                    Text="POWER ON"
+                    TextColor="White" />
+                <Button
+                    BackgroundColor="Red"
+                    Command="{Binding ButtonPressedCommand}"
+                    CommandParameter="RCKY12"
+                    HorizontalOptions="End"
+                    Text="POWER OFF"
+                    TextColor="White" />
+            </StackLayout>
+            <StackLayout
+                HorizontalOptions="CenterAndExpand"
+                Orientation="Horizontal"
+                VerticalOptions="CenterAndExpand">
+                <Button
+                    Command="{Binding ButtonPressedCommand}"
+                    CommandParameter="RCKY27"
+                    Text="CC" />
+                <Button
+                    Command="{Binding ButtonPressedCommand}"
+                    CommandParameter="RCKY28"
+                    Text="AV MODE" />
+                <Button
+                    Command="{Binding ButtonPressedCommand}"
+                    CommandParameter="RCKY29"
+                    Text="VIEW MODE" />
+                <Button
+                    Command="{Binding ButtonPressedCommand}"
+                    CommandParameter="RCKY30"
+                    Text="FLASHBACK" />
+            </StackLayout>
+            <Grid
+                ColumnSpacing="5"
+                RowSpacing="5"
+                VerticalOptions="CenterAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Button
+                    Grid.Row="0"
+                    Grid.RowSpan="2"
+                    Grid.Column="0"
+                    Command="{Binding ButtonPressedCommand}"
+                    CommandParameter="RCKY31"
+                    Text="Mute"
+                    VerticalOptions="Center" />
+                <Button
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Command="{Binding ButtonPressedCommand}"
+                    CommandParameter="RCKY33"
+                    Text="VOL+" />
+                <Button
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Command="{Binding ButtonPressedCommand}"
+                    CommandParameter="RCKY32"
+                    Text="VOL-" />
+                <Button
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Command="{Binding ButtonPressedCommand}"
+                    CommandParameter="RCKY34"
+                    Text="CH+" />
+                <Button
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Command="{Binding ButtonPressedCommand}"
+                    CommandParameter="RCKY35"
+                    Text="CH-" />
+                <Button
+                    Grid.Row="0"
+                    Grid.RowSpan="2"
+                    Grid.Column="3"
+                    Command="{Binding ButtonPressedCommand}"
+                    CommandParameter="RCKY36"
+                    Text="INPUT"
+                    VerticalOptions="Center" />
 
-        </Grid>
-        <Grid
-            ColumnSpacing="5"
-            RowSpacing="5"
-            VerticalOptions="CenterAndExpand">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
+            </Grid>
+            <Grid
+                ColumnSpacing="5"
+                RowSpacing="5"
+                VerticalOptions="CenterAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Button
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="3"
+                    Command="{Binding ButtonPressedCommand}"
+                    CommandParameter="RCKY38"
+                    Text="MENU" />
+                <Button
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Command="{Binding ButtonPressedCommand}"
+                    CommandParameter="RCKY58"
+                    Text="2D/3D" />
+                <Button
+                    Grid.Row="1"
+                    Grid.Column="4"
+                    Command="{Binding ButtonPressedCommand}"
+                    CommandParameter="RCKY39"
+                    Text="SMART CENTRAL" />
+                <Button
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Command="{Binding ButtonPressedCommand}"
+                    CommandParameter="RCKY41"
+                    Text="▲" />
+                <Button
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Command="{Binding ButtonPressedCommand}"
+                    CommandParameter="RCKY43"
+                    Text="◄" />
+                <Button
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    Command="{Binding ButtonPressedCommand}"
+                    CommandParameter="RCKY40"
+                    Text="" />
+                <Button
+                    Grid.Row="2"
+                    Grid.Column="3"
+                    Command="{Binding ButtonPressedCommand}"
+                    CommandParameter="RCKY44"
+                    Text="►" />
+                <Button
+                    Grid.Row="3"
+                    Grid.Column="2"
+                    Command="{Binding ButtonPressedCommand}"
+                    CommandParameter="RCKY42"
+                    Text="▼" />
+                <Button
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Command="{Binding ButtonPressedCommand}"
+                    CommandParameter="RCKY46"
+                    Text="EXIT" />
+                <Button
+                    Grid.Row="3"
+                    Grid.Column="4"
+                    Command="{Binding ButtonPressedCommand}"
+                    CommandParameter="RCKY45"
+                    Text="RETURN" />
+            </Grid>
             <Button
-                Grid.Row="0"
-                Grid.Column="1"
-                Grid.ColumnSpan="3"
+                BackgroundColor="Red"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="RCKY38"
-                Text="MENU" />
-            <Button
-                Grid.Row="1"
-                Grid.Column="0"
-                Command="{Binding ButtonPressedCommand}"
-                CommandParameter="RCKY58"
-                Text="2D/3D" />
-            <Button
-                Grid.Row="1"
-                Grid.Column="4"
-                Command="{Binding ButtonPressedCommand}"
-                CommandParameter="RCKY39"
-                Text="SMART CENTRAL" />
-            <Button
-                Grid.Row="1"
-                Grid.Column="2"
-                Command="{Binding ButtonPressedCommand}"
-                CommandParameter="RCKY41"
-                Text="▲" />
-            <Button
-                Grid.Row="2"
-                Grid.Column="1"
-                Command="{Binding ButtonPressedCommand}"
-                CommandParameter="RCKY43"
-                Text="◄" />
-            <Button
-                Grid.Row="2"
-                Grid.Column="2"
-                Command="{Binding ButtonPressedCommand}"
-                CommandParameter="RCKY40"
-                Text="" />
-            <Button
-                Grid.Row="2"
-                Grid.Column="3"
-                Command="{Binding ButtonPressedCommand}"
-                CommandParameter="RCKY44"
-                Text="►" />
-            <Button
-                Grid.Row="3"
-                Grid.Column="2"
-                Command="{Binding ButtonPressedCommand}"
-                CommandParameter="RCKY42"
-                Text="▼" />
-            <Button
-                Grid.Row="3"
-                Grid.Column="0"
-                Command="{Binding ButtonPressedCommand}"
-                CommandParameter="RCKY46"
-                Text="EXIT" />
-            <Button
-                Grid.Row="3"
-                Grid.Column="4"
-                Command="{Binding ButtonPressedCommand}"
-                CommandParameter="RCKY45"
-                Text="RETURN" />
-        </Grid>
-        <Button
-            BackgroundColor="Red"
-            Command="{Binding ButtonPressedCommand}"
-            CommandParameter="RCKY59"
-            Text="NETFLIX"
-            TextColor="White"
-            VerticalOptions="End" />
-    </StackLayout>
+                CommandParameter="RCKY59"
+                Text="NETFLIX"
+                TextColor="White"
+                VerticalOptions="End" />
+        </StackLayout>
+    </ScrollView>
 </ContentPage>
