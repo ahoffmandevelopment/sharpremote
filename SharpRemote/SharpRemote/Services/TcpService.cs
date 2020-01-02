@@ -1,6 +1,7 @@
 ﻿using SharpRemote.Services;
 using SharpRemote.Services.Interfaces;
 using Sockets.Plugin;
+using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -92,7 +93,20 @@ namespace SharpRemote.Services
         public async Task WriteAsync(byte[] buffer, int offset, int count)
         {
             await client.WriteStream.WriteAsync(buffer, offset, count);
-            await client.WriteStream.FlushAsync();
+            await client.WriteStream.FlushAsync();            
+        }
+
+        private async Task<string> ReadAsync()
+        {
+            byte[] resultBuffer = new byte[4];
+
+            await client.ReadStream.ReadAsync(resultBuffer, 0, 4);
+
+            var resultString = Encoding.ASCII.GetString(resultBuffer);
+
+            Debug.WriteLine($"----------- {resultString}");
+
+            return resultString;
         }
     }
 }
