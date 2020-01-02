@@ -28,7 +28,7 @@ namespace SharpRemote.ViewModels
             {
                 vibrateService.Vibrate(50);
 
-                await tcpService.WriteAsync($"RCKY{parameter}".ToSharpCommandString());
+                await tcpService.WriteAsync(parameter.ToSharpCommandString());
             }
             catch (Exception)
             {

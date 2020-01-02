@@ -35,84 +35,84 @@
                 Grid.Row="0"
                 Grid.Column="0"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="01"
+                CommandParameter="RCKY01"
                 FontSize="Large"
                 Text="1" />
             <Button
                 Grid.Row="0"
                 Grid.Column="1"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="02"
+                CommandParameter="RCKY02"
                 FontSize="Large"
                 Text="2" />
             <Button
                 Grid.Row="0"
                 Grid.Column="2"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="03"
+                CommandParameter="RCKY03"
                 FontSize="Large"
                 Text="3" />
             <Button
                 Grid.Row="1"
                 Grid.Column="0"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="04"
+                CommandParameter="RCKY04"
                 FontSize="Large"
                 Text="4" />
             <Button
                 Grid.Row="1"
                 Grid.Column="1"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="05"
+                CommandParameter="RCKY05"
                 FontSize="Large"
                 Text="5" />
             <Button
                 Grid.Row="1"
                 Grid.Column="2"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="06"
+                CommandParameter="RCKY06"
                 FontSize="Large"
                 Text="6" />
             <Button
                 Grid.Row="2"
                 Grid.Column="0"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="07"
+                CommandParameter="RCKY07"
                 FontSize="Large"
                 Text="7" />
             <Button
                 Grid.Row="2"
                 Grid.Column="1"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="08"
+                CommandParameter="RCKY08"
                 FontSize="Large"
                 Text="8" />
             <Button
                 Grid.Row="2"
                 Grid.Column="2"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="09"
+                CommandParameter="RCKY09"
                 FontSize="Large"
                 Text="9" />
             <Button
                 Grid.Row="3"
                 Grid.Column="0"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="10"
+                CommandParameter="RCKY10"
                 FontSize="Large"
                 Text="." />
             <Button
                 Grid.Row="3"
                 Grid.Column="1"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="00"
+                CommandParameter="RCKY00"
                 FontSize="Large"
                 Text="0" />
             <Button
                 Grid.Row="3"
                 Grid.Column="2"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="11"
+                CommandParameter="RCKY11"
                 FontSize="Large"
                 Text="ENT" />
         </Grid>

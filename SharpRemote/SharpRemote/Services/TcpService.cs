@@ -93,7 +93,9 @@ namespace SharpRemote.Services
         public async Task WriteAsync(byte[] buffer, int offset, int count)
         {
             await client.WriteStream.WriteAsync(buffer, offset, count);
-            await client.WriteStream.FlushAsync();            
+            await client.WriteStream.FlushAsync();
+
+            var thing = await ReadAsync();
         }
 
         private async Task<string> ReadAsync()

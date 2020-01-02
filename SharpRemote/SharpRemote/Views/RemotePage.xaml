@@ -4,7 +4,9 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:viewModels="clr-namespace:SharpRemote.ViewModels"
-    Padding="5">
+    Title="Remote"
+    Padding="5"
+    IconImageSource="remote_control_black">
 
     <ContentPage.BindingContext>
         <viewModels:RemotePageViewModel />
@@ -36,7 +38,7 @@
             <Button
                 BackgroundColor="Red"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="12"
+                CommandParameter="RCKY12"
                 HorizontalOptions="End"
                 Text="POWER OFF"
                 TextColor="White" />
@@ -47,19 +49,19 @@
             VerticalOptions="CenterAndExpand">
             <Button
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="27"
+                CommandParameter="RCKY27"
                 Text="CC" />
             <Button
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="28"
+                CommandParameter="RCKY28"
                 Text="AV MODE" />
             <Button
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="29"
+                CommandParameter="RCKY29"
                 Text="VIEW MODE" />
             <Button
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="30"
+                CommandParameter="RCKY30"
                 Text="FLASHBACK" />
         </StackLayout>
         <Grid
@@ -81,39 +83,39 @@
                 Grid.RowSpan="2"
                 Grid.Column="0"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="31"
+                CommandParameter="RCKY31"
                 Text="Mute"
                 VerticalOptions="Center" />
             <Button
                 Grid.Row="0"
                 Grid.Column="1"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="33"
+                CommandParameter="RCKY33"
                 Text="VOL+" />
             <Button
                 Grid.Row="1"
                 Grid.Column="1"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="32"
+                CommandParameter="RCKY32"
                 Text="VOL-" />
             <Button
                 Grid.Row="0"
                 Grid.Column="2"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="34"
+                CommandParameter="RCKY34"
                 Text="CH+" />
             <Button
                 Grid.Row="1"
                 Grid.Column="2"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="35"
+                CommandParameter="RCKY35"
                 Text="CH-" />
             <Button
                 Grid.Row="0"
                 Grid.RowSpan="2"
                 Grid.Column="3"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="36"
+                CommandParameter="RCKY36"
                 Text="INPUT"
                 VerticalOptions="Center" />
 
@@ -141,67 +143,67 @@
                 Grid.Column="1"
                 Grid.ColumnSpan="3"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="38"
+                CommandParameter="RCKY38"
                 Text="MENU" />
             <Button
                 Grid.Row="1"
                 Grid.Column="0"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="58"
+                CommandParameter="RCKY58"
                 Text="2D/3D" />
             <Button
                 Grid.Row="1"
                 Grid.Column="4"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="39"
+                CommandParameter="RCKY39"
                 Text="SMART CENTRAL" />
             <Button
                 Grid.Row="1"
                 Grid.Column="2"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="41"
+                CommandParameter="RCKY41"
                 Text="▲" />
             <Button
                 Grid.Row="2"
                 Grid.Column="1"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="43"
+                CommandParameter="RCKY43"
                 Text="◄" />
             <Button
                 Grid.Row="2"
                 Grid.Column="2"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="40"
+                CommandParameter="RCKY40"
                 Text="" />
             <Button
                 Grid.Row="2"
                 Grid.Column="3"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="44"
+                CommandParameter="RCKY44"
                 Text="►" />
             <Button
                 Grid.Row="3"
                 Grid.Column="2"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="42"
+                CommandParameter="RCKY42"
                 Text="▼" />
             <Button
                 Grid.Row="3"
                 Grid.Column="0"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="46"
+                CommandParameter="RCKY46"
                 Text="EXIT" />
             <Button
                 Grid.Row="3"
                 Grid.Column="4"
                 Command="{Binding ButtonPressedCommand}"
-                CommandParameter="45"
+                CommandParameter="RCKY45"
                 Text="RETURN" />
         </Grid>
         <Button
             BackgroundColor="Red"
             Command="{Binding ButtonPressedCommand}"
-            CommandParameter="59"
+            CommandParameter="RCKY59"
             Text="NETFLIX"
             TextColor="White"
             VerticalOptions="End" />

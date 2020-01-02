@@ -1,5 +1,4 @@
 ﻿using SharpRemote.Services.Interfaces;
-using SharpRemote.Views;
 using Xamarin.Forms;
 
 namespace SharpRemote
@@ -12,9 +11,9 @@ namespace SharpRemote
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new RemotePage());
-
             tcpService = DependencyService.Resolve<ITcpService>();
+
+            MainPage = new AppShell();            
         }
 
         protected override async void OnStart()
