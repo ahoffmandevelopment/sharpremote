@@ -16,9 +16,6 @@
         <ToolbarItem
             Command="{Binding KeypadPressedCommand}"
             IconImageSource="keypad_black" />
-        <ToolbarItem
-            Command="{Binding RefreshConnectionPressedCommand}"
-            IconImageSource="refresh_black" />
     </ContentPage.ToolbarItems>
 
     <ScrollView>

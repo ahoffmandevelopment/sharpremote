@@ -1,7 +1,9 @@
 ﻿using SharpRemote.Services;
 using SharpRemote.Services.Interfaces;
 using Sockets.Plugin;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -15,10 +17,12 @@ namespace SharpRemote.Services
     public class TcpService : ITcpService
     {
         private readonly TcpSocketClient client;
+        private readonly Queue<string> commands;
 
         public TcpService()
         {
             client = new TcpSocketClient();
+            commands = new Queue<string>();
         }
 
         /// <summary>
@@ -71,36 +75,34 @@ namespace SharpRemote.Services
         /// <exception cref="System.InvalidOperationException">The stream is currently in use by a previous write operation.</exception>
         public async Task WriteAsync(string data)
         {
-            var bytes = Encoding.ASCII.GetBytes(data);
+            if (!client.Socket.Connected)
+            {
+                await ConnectToClientAsync();
+            }
 
-            await WriteAsync(bytes, 0, bytes.Length);
-        }
+            commands.Enqueue(data);
 
-        /// <summary>
-        /// Asynchronously writes a sequence of bytes to the current stream and advances
-        /// the current position within this stream by the number of bytes written.
-        /// </summary>
-        /// <param name="buffer">The buffer to write data from.</param>
-        /// <param name="offset">The zero-based byte offset in buffer from which to begin copying bytes to the stream.</param>
-        /// <param name="count">The maximum number of bytes to write.</param>
-        /// <returns>A task that represents the asynchronous write operation.</returns>
-        /// <exception cref="System.ArgumentNullException">Buffer is null.</exception> 
-        /// <exception cref="System.ArgumentOutOfRangeException">Offset or count is negative.</exception>
-        /// <exception cref="System.ArgumentException">The sum of offset and count is larger than the buffer length.</exception>
-        /// <exception cref="System.NotSupportedException">The stream does not support writing.</exception>
-        /// <exception cref="System.ObjectDisposedException">The stream has been disposed.</exception>
-        /// <exception cref="System.InvalidOperationException">The stream is currently in use by a previous write operation.</exception>
-        public async Task WriteAsync(byte[] buffer, int offset, int count)
-        {
-            await client.WriteStream.WriteAsync(buffer, offset, count);
-            await client.WriteStream.FlushAsync();
+            do
+            {
+                var bytes = Encoding.ASCII.GetBytes(commands.Dequeue());
 
-            var thing = await ReadAsync();
+                await WriteAsync(bytes, 0, bytes.Length);
+
+                string response = null;
+
+                while (response is null)
+                {
+                    response = await ReadAsync();
+                }              
+
+            } while (commands.Any());
+
+            await client.DisconnectAsync();
         }
 
         private async Task<string> ReadAsync()
         {
-            byte[] resultBuffer = new byte[4];
+            var resultBuffer = new byte[4];
 
             await client.ReadStream.ReadAsync(resultBuffer, 0, 4);
 
@@ -109,6 +111,12 @@ namespace SharpRemote.Services
             Debug.WriteLine($"----------- {resultString}");
 
             return resultString;
+        }
+
+        private async Task WriteAsync(byte[] buffer, int offset, int count)
+        {
+            await client.WriteStream.WriteAsync(buffer, offset, count);
+            await client.WriteStream.FlushAsync();
         }
     }
 }
