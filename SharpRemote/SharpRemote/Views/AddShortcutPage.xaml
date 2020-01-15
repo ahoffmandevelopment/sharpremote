@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+    x:Class="SharpRemote.Views.AddShortcutPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:viewModels="clr-namespace:SharpRemote.ViewModels"
+    IsAnimationEnabled="False"
+    Visual="Material" BackgroundColor="White" Padding="5">
+
+    <ContentPage.BindingContext>
+        <viewModels:AddShotcutPageViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".2*" />
+            <RowDefinition Height=".8*" />
+        </Grid.RowDefinitions>
+        <Button
+            Grid.Row="0"
+            BackgroundColor="{Binding BackgroundColor}"
+            HorizontalOptions="Center"
+            Text="{Binding ButtonText}"
+            TextColor="{Binding FontColor}"
+            VerticalOptions="Center" />
+        <ScrollView Grid.Row="1">
+            <StackLayout>
+                <Entry
+                    HorizontalOptions="FillAndExpand"
+                    Placeholder="Button Text"
+                    Text="{Binding ButtonText}" />
+                <Entry
+                    HorizontalOptions="FillAndExpand"
+                    Placeholder="Command Text"
+                    Text="{Binding CommandText}" />
+                <Entry
+                    HorizontalOptions="FillAndExpand"
+                    Placeholder="Category"
+                    Text="{Binding Category}" />
+                <StackLayout Orientation="Horizontal">
+                    <Button
+                        Command="{Binding SaveCommand}"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Save" />
+                    <Button
+                        Command="{Binding CancelCommand}"
+                        HorizontalOptions="End"
+                        Text="Cancel" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</pages:PopupPage>

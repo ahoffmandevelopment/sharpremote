@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using SharpRemote.Sqlite.Models;
+using System.Collections.Generic;
 
 namespace SharpRemote.Models
 {

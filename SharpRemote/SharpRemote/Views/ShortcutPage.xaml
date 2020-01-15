@@ -12,6 +12,12 @@
         <viewModels:ShortcutPageViewModel />
     </ContentPage.BindingContext>
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Command="{Binding AddShortcutPressedCommand}"
+            IconImageSource="add_black" />
+    </ContentPage.ToolbarItems>
+
     <CollectionView
         IsGrouped="True"
         ItemsSource="{Binding Shortcuts}">

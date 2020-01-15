@@ -34,6 +34,8 @@ namespace SharpRemote.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             Xamarin.Forms.Forms.Init(this, savedInstanceState);
             Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
+            Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState); // Must be done after Forms.Init call.
+            Acr.UserDialogs.UserDialogs.Init(this);
         }
     }
 }

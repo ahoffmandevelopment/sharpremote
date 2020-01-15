@@ -10,12 +10,8 @@ namespace SharpRemote.ViewModels
 {
     public class RemotePageViewModel : BaseViewModel
     {
-        private readonly IPopupNavigation popupNavigation;
-
         public RemotePageViewModel()
         {
-            popupNavigation = PopupNavigation.Instance;
-
             WireupCommands();
         }
 
