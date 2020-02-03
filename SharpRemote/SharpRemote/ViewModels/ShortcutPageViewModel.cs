@@ -1,4 +1,5 @@
 ﻿using Rg.Plugins.Popup.Events;
+using Rg.Plugins.Popup.Pages;
 using SharpRemote.Models;
 using SharpRemote.Sqlite.Models;
 using SharpRemote.Views;
@@ -38,6 +39,11 @@ namespace SharpRemote.ViewModels
         private async void PopupNavigation_Popping(object sender, PopupNavigationEventArgs e)
         {
             popupNavigation.Popping -= PopupNavigation_Popping;
+
+            if (true)
+            {
+
+            }
             await ResetShortcuts();
         }
 
@@ -66,25 +72,33 @@ namespace SharpRemote.ViewModels
                 new RemoteButton
                 {
                     ButtonText = "HDMI 1",
-                    CommandText = "IAVD1"
+                    CommandText = "IAVD1",
+                    BackgroundColorHex = Color.Accent.ToHex(),
+                    FontColorHex = Color.White.ToHex()
                 },
 
                 new RemoteButton
                 {
                     ButtonText = "HDMI 2",
-                    CommandText = "IAVD2"
+                    CommandText = "IAVD2",
+                    BackgroundColorHex = Color.Accent.ToHex(),
+                    FontColorHex = Color.White.ToHex()
                 },
 
                 new RemoteButton
                 {
                     ButtonText = "HDMI 3",
-                    CommandText = "IAVD3"
+                    CommandText = "IAVD3",
+                    BackgroundColorHex = Color.Accent.ToHex(),
+                    FontColorHex = Color.White.ToHex()
                 },
 
                 new RemoteButton
                 {
                     ButtonText = "TV",
-                    CommandText = "ITVD0"
+                    CommandText = "ITVD0",
+                    BackgroundColorHex = Color.Accent.ToHex(),
+                    FontColorHex = Color.White.ToHex()
                 }
             }));
 
@@ -93,19 +107,25 @@ namespace SharpRemote.ViewModels
                 new RemoteButton
                 {
                     ButtonText = "16.2",
-                    CommandText = "DA2P1602"
+                    CommandText = "DA2P1602",
+                    BackgroundColorHex = Color.Accent.ToHex(),
+                    FontColorHex = Color.White.ToHex()
                 },
-
+                
                 new RemoteButton
                 {
                     ButtonText = "7.1",
-                    CommandText = "DA2P0701"
+                    CommandText = "DA2P0701",
+                    BackgroundColorHex = Color.Accent.ToHex(),
+                    FontColorHex = Color.White.ToHex()
                 },
 
                 new RemoteButton
                 {
                     ButtonText = "12.1",
-                    CommandText = "DA2P1201"
+                    CommandText = "DA2P1201",
+                    BackgroundColorHex = Color.Accent.ToHex(),
+                    FontColorHex = Color.White.ToHex()                    
                 }
             }));
 
@@ -114,19 +134,25 @@ namespace SharpRemote.ViewModels
                 new RemoteButton
                 {
                     ButtonText = "10",
-                    CommandText = "VOLM010"
+                    CommandText = "VOLM010",
+                    BackgroundColorHex = Color.Accent.ToHex(),
+                    FontColorHex = Color.White.ToHex()
                 },
 
                 new RemoteButton
                 {
                     ButtonText = "20",
-                    CommandText = "VOLM020"
+                    CommandText = "VOLM020",
+                    BackgroundColorHex = Color.Accent.ToHex(),
+                    FontColorHex = Color.White.ToHex()
                 },
 
                 new RemoteButton
                 {
                     ButtonText = "30",
-                    CommandText = "VOLM030"
+                    CommandText = "VOLM030",
+                    BackgroundColorHex = Color.Accent.ToHex(),
+                    FontColorHex = Color.White.ToHex()
                 }
             }));            
         }
@@ -153,10 +179,10 @@ namespace SharpRemote.ViewModels
                             new RemoteButton
                             {
                                 ButtonText = b.ButtonText,
-                                BackgroundColorHex = b.BackgroundColorHex,
+                                BackgroundColorHex = string.IsNullOrEmpty(b.BackgroundColorHex) ? Color.Accent.ToHex() : b.BackgroundColorHex,
                                 Category = b.Category,
                                 CommandText = b.CommandText,
-                                FontColorHex = b.FontColorHex,
+                                FontColorHex = string.IsNullOrEmpty(b.FontColorHex) ? Color.White.ToHex() : b.FontColorHex,
                                 ID = b.ID
                             }
                         }));

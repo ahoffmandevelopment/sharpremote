@@ -1,9 +1,30 @@
 ﻿using System;
+using System.Text;
 
 namespace SharpRemote.Extensions
 {
     public static class StringExtensions
     {
+        public static string ToFriendlyName(this string input)
+        {
+            var stringBuilder = new StringBuilder();
+
+            stringBuilder.Clear();
+            int index = 0;
+
+            foreach (var ch in input)
+            {
+                if (index != 0 && char.IsUpper(ch))
+                {
+                    stringBuilder.Append(' ');
+                }
+                stringBuilder.Append(ch);
+                index++;
+            }
+
+            return stringBuilder.ToString();
+        }
+
         /// <summary>
         /// Takes a string, right pads it to a length of 8, and adds a carriage return.
         /// </summary>

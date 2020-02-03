@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+    x:Class="SharpRemote.Views.ColorPickerPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:SharpRemote.Controls"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:viewModels="clr-namespace:SharpRemote.ViewModels"
+    CloseWhenBackgroundIsClicked="True"
+    IsAnimationEnabled="False" Visual="Material">
+
+    <pages:PopupPage.BindingContext>
+        <viewModels:ColorPickerPageViewModel />
+    </pages:PopupPage.BindingContext>
+
+    <Frame BackgroundColor="White" Margin="50" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+        <controls:ColorPicker Items="{Binding Colors}" SelectionChangedCommand="{Binding SelectionChangedCommand}"/>
+    </Frame>    
+</pages:PopupPage>

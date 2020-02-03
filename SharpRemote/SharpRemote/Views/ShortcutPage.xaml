@@ -29,17 +29,25 @@
         <CollectionView.GroupHeaderTemplate>
             <DataTemplate>
                 <StackLayout>
-                    <Label Text="{Binding Name}" TextColor="Black" FontSize="Large" />
-                    <BoxView HeightRequest="1" BackgroundColor="Black" HorizontalOptions="FillAndExpand" />
+                    <Label
+                        FontSize="Large"
+                        Text="{Binding Name}"
+                        TextColor="Black" />
+                    <BoxView
+                        BackgroundColor="Black"
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand" />
                 </StackLayout>
             </DataTemplate>
         </CollectionView.GroupHeaderTemplate>
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <Button
+                    BackgroundColor="{Binding BackgroundColorHex}"
                     Command="{Binding Source={x:Reference shortcutPage}, Path=BindingContext.ButtonPressedCommand}"
                     CommandParameter="{Binding CommandText}"
-                    Text="{Binding ButtonText}" />
+                    Text="{Binding ButtonText}"
+                    TextColor="{Binding FontColorHex}" />
             </DataTemplate>
         </CollectionView.ItemTemplate>
     </CollectionView>

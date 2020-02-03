@@ -40,6 +40,8 @@
                     HorizontalOptions="FillAndExpand"
                     Placeholder="Category"
                     Text="{Binding Category}" />
+                <Button Text="Button Background Color" HorizontalOptions="FillAndExpand" Command="{Binding SetBackgroundColorCommand}" />
+                <Button Text="Text Color" HorizontalOptions="FillAndExpand" Command="{Binding SetFontColorCommand}" />
                 <StackLayout Orientation="Horizontal">
                     <Button
                         Command="{Binding SaveCommand}"
