@@ -9,7 +9,6 @@ using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
-using SharpRemote.Extensions;
 
 namespace SharpRemote.ViewModels
 {
