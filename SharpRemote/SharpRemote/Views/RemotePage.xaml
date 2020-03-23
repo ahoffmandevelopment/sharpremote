@@ -37,7 +37,7 @@
                     TextColor="White" />
                 <controls:RemoteButtonView
                     BackgroundColor="Red"
-                    Command="{Binding controls:ButtonPressedCommand}"
+                    Command="{Binding ButtonPressedCommand}"
                     CommandParameter="RCKY12"
                     HorizontalOptions="End"
                     Text="POWER OFF"
@@ -48,19 +48,19 @@
                 Orientation="Horizontal"
                 VerticalOptions="CenterAndExpand">
                 <controls:RemoteButtonView
-                    Command="{Binding controls:ButtonPressedCommand}"
+                    Command="{Binding ButtonPressedCommand}"
                     CommandParameter="RCKY27"
                     Text="CC" />
                 <controls:RemoteButtonView
-                    Command="{Binding controls:ButtonPressedCommand}"
+                    Command="{Binding ButtonPressedCommand}"
                     CommandParameter="RCKY28"
                     Text="AV MODE" />
                 <controls:RemoteButtonView
-                    Command="{Binding controls:ButtonPressedCommand}"
+                    Command="{Binding ButtonPressedCommand}"
                     CommandParameter="RCKY29"
                     Text="VIEW MODE" />
                 <controls:RemoteButtonView
-                    Command="{Binding controls:ButtonPressedCommand}"
+                    Command="{Binding ButtonPressedCommand}"
                     CommandParameter="RCKY30"
                     Text="FLASHBACK" />
             </StackLayout>
@@ -82,39 +82,39 @@
                     Grid.Row="0"
                     Grid.RowSpan="2"
                     Grid.Column="0"
-                    Command="{Binding controls:ButtonPressedCommand}"
+                    Command="{Binding ButtonPressedCommand}"
                     CommandParameter="RCKY31"
                     Text="Mute"
                     VerticalOptions="Center" />
                 <controls:RemoteButtonView
                     Grid.Row="0"
                     Grid.Column="1"
-                    Command="{Binding controls:ButtonPressedCommand}"
+                    Command="{Binding ButtonPressedCommand}"
                     CommandParameter="RCKY33"
                     Text="VOL+" />
                 <controls:RemoteButtonView
                     Grid.Row="1"
                     Grid.Column="1"
-                    Command="{Binding controls:ButtonPressedCommand}" 
+                    Command="{Binding ButtonPressedCommand}" 
                     CommandParameter="RCKY32"
                     Text="VOL-" />
                 <controls:RemoteButtonView
                     Grid.Row="0"
                     Grid.Column="2"
-                    Command="{Binding controls:ButtonPressedCommand}"
+                    Command="{Binding ButtonPressedCommand}"
                     CommandParameter="RCKY34"
                     Text="CH+" />
                 <controls:RemoteButtonView
                     Grid.Row="1"
                     Grid.Column="2"
-                    Command="{Binding controls:ButtonPressedCommand}"
+                    Command="{Binding ButtonPressedCommand}"
                     CommandParameter="RCKY35"
                     Text="CH-" />
                 <controls:RemoteButtonView
                     Grid.Row="0"
                     Grid.RowSpan="2"
                     Grid.Column="3"
-                    Command="{Binding controls:ButtonPressedCommand}"
+                    Command="{Binding ButtonPressedCommand}"
                     CommandParameter="RCKY36"
                     Text="INPUT"
                     VerticalOptions="Center" />
@@ -142,67 +142,67 @@
                     Grid.Row="0"
                     Grid.Column="1"
                     Grid.ColumnSpan="3"
-                    Command="{Binding controls:ButtonPressedCommand}"
+                    Command="{Binding ButtonPressedCommand}"
                     CommandParameter="RCKY38"
                     Text="MENU" />
                 <controls:RemoteButtonView
                     Grid.Row="1"
                     Grid.Column="0"
-                    Command="{Binding controls:ButtonPressedCommand}"
+                    Command="{Binding ButtonPressedCommand}"
                     CommandParameter="RCKY58"
                     Text="2D/3D" />
                 <controls:RemoteButtonView
                     Grid.Row="1"
                     Grid.Column="4"
-                    Command="{Binding controls:ButtonPressedCommand}"
+                    Command="{Binding ButtonPressedCommand}"
                     CommandParameter="RCKY39"
                     Text="SMART CENTRAL" />
                 <controls:RemoteButtonView
                     Grid.Row="1"
                     Grid.Column="2"
-                    Command="{Binding controls:ButtonPressedCommand}"
+                    Command="{Binding ButtonPressedCommand}"
                     CommandParameter="RCKY41"
                     Text="▲" />
                 <controls:RemoteButtonView
                     Grid.Row="2"
                     Grid.Column="1"
-                    Command="{Binding controls:ButtonPressedCommand}"
+                    Command="{Binding ButtonPressedCommand}"
                     CommandParameter="RCKY43"
                     Text="◄" />
                 <controls:RemoteButtonView
                     Grid.Row="2"
                     Grid.Column="2"
-                    Command="{Binding controls:ButtonPressedCommand}"
+                    Command="{Binding ButtonPressedCommand}"
                     CommandParameter="RCKY40"
                     Text="" />
                 <controls:RemoteButtonView
                     Grid.Row="2"
                     Grid.Column="3"
-                    Command="{Binding controls:ButtonPressedCommand}"
+                    Command="{Binding ButtonPressedCommand}"
                     CommandParameter="RCKY44"
                     Text="►" />
                 <controls:RemoteButtonView
                     Grid.Row="3"
                     Grid.Column="2"
-                    Command="{Binding controls:ButtonPressedCommand}"
+                    Command="{Binding ButtonPressedCommand}"
                     CommandParameter="RCKY42"
                     Text="▼" />
                 <controls:RemoteButtonView
                     Grid.Row="3"
                     Grid.Column="0"
-                    Command="{Binding controls:ButtonPressedCommand}"
+                    Command="{Binding ButtonPressedCommand}"
                     CommandParameter="RCKY46"
                     Text="EXIT" />
                 <controls:RemoteButtonView
                     Grid.Row="3"
                     Grid.Column="4"
-                    Command="{Binding controls:ButtonPressedCommand}"
+                    Command="{Binding ButtonPressedCommand}"
                     CommandParameter="RCKY45"
                     Text="RETURN" />
             </Grid>
             <controls:RemoteButtonView
                 BackgroundColor="Red"
-                Command="{Binding controls:ButtonPressedCommand}"
+                Command="{Binding ButtonPressedCommand}"
                 CommandParameter="RCKY59"
                 Text="NETFLIX"
                 TextColor="White"
