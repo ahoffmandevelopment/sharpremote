@@ -3,6 +3,7 @@
     x:Class="SharpRemote.Views.KeypadPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:SharpRemote.Controls"
     xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
     xmlns:viewModels="clr-namespace:SharpRemote.ViewModels"
     CloseWhenBackgroundIsClicked="True"
@@ -31,87 +32,87 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <Button
+            <controls:RemoteButtonView
                 Grid.Row="0"
                 Grid.Column="0"
-                Command="{Binding ButtonPressedCommand}"
+                Command="{Binding controls:RemoteButtonViewPressedCommand}"
                 CommandParameter="RCKY01"
                 FontSize="Large"
                 Text="1" />
-            <Button
+            <controls:RemoteButtonView
                 Grid.Row="0"
                 Grid.Column="1"
-                Command="{Binding ButtonPressedCommand}"
+                Command="{Binding controls:RemoteButtonViewPressedCommand}"
                 CommandParameter="RCKY02"
                 FontSize="Large"
                 Text="2" />
-            <Button
+            <controls:RemoteButtonView
                 Grid.Row="0"
                 Grid.Column="2"
-                Command="{Binding ButtonPressedCommand}"
+                Command="{Binding controls:RemoteButtonViewPressedCommand}"
                 CommandParameter="RCKY03"
                 FontSize="Large"
                 Text="3" />
-            <Button
+            <controls:RemoteButtonView
                 Grid.Row="1"
                 Grid.Column="0"
-                Command="{Binding ButtonPressedCommand}"
+                Command="{Binding controls:RemoteButtonViewPressedCommand}"
                 CommandParameter="RCKY04"
                 FontSize="Large"
                 Text="4" />
-            <Button
+            <controls:RemoteButtonView
                 Grid.Row="1"
                 Grid.Column="1"
-                Command="{Binding ButtonPressedCommand}"
+                Command="{Binding controls:RemoteButtonViewPressedCommand}"
                 CommandParameter="RCKY05"
                 FontSize="Large"
                 Text="5" />
-            <Button
+            <controls:RemoteButtonView
                 Grid.Row="1"
                 Grid.Column="2"
-                Command="{Binding ButtonPressedCommand}"
+                Command="{Binding controls:RemoteButtonViewPressedCommand}"
                 CommandParameter="RCKY06"
                 FontSize="Large"
                 Text="6" />
-            <Button
+            <controls:RemoteButtonView
                 Grid.Row="2"
                 Grid.Column="0"
-                Command="{Binding ButtonPressedCommand}"
+                Command="{Binding controls:RemoteButtonViewPressedCommand}"
                 CommandParameter="RCKY07"
                 FontSize="Large"
                 Text="7" />
-            <Button
+            <controls:RemoteButtonView
                 Grid.Row="2"
                 Grid.Column="1"
-                Command="{Binding ButtonPressedCommand}"
+                Command="{Binding controls:RemoteButtonViewPressedCommand}"
                 CommandParameter="RCKY08"
                 FontSize="Large"
                 Text="8" />
-            <Button
+            <controls:RemoteButtonView
                 Grid.Row="2"
                 Grid.Column="2"
-                Command="{Binding ButtonPressedCommand}"
+                Command="{Binding controls:RemoteButtonViewPressedCommand}"
                 CommandParameter="RCKY09"
                 FontSize="Large"
                 Text="9" />
-            <Button
+            <controls:RemoteButtonView
                 Grid.Row="3"
                 Grid.Column="0"
-                Command="{Binding ButtonPressedCommand}"
+                Command="{Binding controls:RemoteButtonViewPressedCommand}"
                 CommandParameter="RCKY10"
                 FontSize="Large"
                 Text="." />
-            <Button
+            <controls:RemoteButtonView
                 Grid.Row="3"
                 Grid.Column="1"
-                Command="{Binding ButtonPressedCommand}"
+                Command="{Binding controls:RemoteButtonViewPressedCommand}"
                 CommandParameter="RCKY00"
                 FontSize="Large"
                 Text="0" />
-            <Button
+            <controls:RemoteButtonView
                 Grid.Row="3"
                 Grid.Column="2"
-                Command="{Binding ButtonPressedCommand}"
+                Command="{Binding controls:RemoteButtonViewPressedCommand}"
                 CommandParameter="RCKY11"
                 FontSize="Large"
                 Text="ENT" />

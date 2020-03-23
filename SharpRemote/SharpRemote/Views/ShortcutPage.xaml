@@ -3,6 +3,7 @@
     x:Class="SharpRemote.Views.ShortcutPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:SharpRemote.Controls"
     xmlns:viewModels="clr-namespace:SharpRemote.ViewModels"
     x:Name="shortcutPage"
     Title="Shortcuts"
@@ -42,7 +43,7 @@
         </CollectionView.GroupHeaderTemplate>
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <Button
+                <controls:RemoteButtonView
                     BackgroundColor="{Binding BackgroundColorHex}"
                     Command="{Binding Source={x:Reference shortcutPage}, Path=BindingContext.ButtonPressedCommand}"
                     CommandParameter="{Binding CommandText}"

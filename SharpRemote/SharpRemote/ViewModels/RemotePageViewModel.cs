@@ -1,6 +1,4 @@
-﻿using Rg.Plugins.Popup.Contracts;
-using Rg.Plugins.Popup.Services;
-using SharpRemote.Extensions;
+﻿using SharpRemote.Extensions;
 using SharpRemote.Views;
 using System.Threading.Tasks;
 using System.Windows.Input;
