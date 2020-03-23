@@ -8,7 +8,7 @@ namespace SharpRemote.Droid
     [Activity(
         Label = "SharpRemote",
         Icon = "@mipmap/icon",
-        Theme = "@style/MainTheme",
+        Theme = "@style/MyTheme.Splash",
         MainLauncher = true,
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
         ScreenOrientation = ScreenOrientation.Portrait)]
@@ -24,6 +24,8 @@ namespace SharpRemote.Droid
             PerformInits(savedInstanceState);
             
             LoadApplication(new App());
+
+            base.SetTheme(Resource.Style.MainTheme);
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
