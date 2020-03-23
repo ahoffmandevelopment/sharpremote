@@ -35,84 +35,84 @@
             <controls:RemoteButtonView
                 Grid.Row="0"
                 Grid.Column="0"
-                Command="{Binding controls:RemoteButtonViewPressedCommand}"
+                Command="{Binding controls:ButtonPressedCommand}"
                 CommandParameter="RCKY01"
                 FontSize="Large"
                 Text="1" />
             <controls:RemoteButtonView
                 Grid.Row="0"
                 Grid.Column="1"
-                Command="{Binding controls:RemoteButtonViewPressedCommand}"
+                Command="{Binding controls:ButtonPressedCommand}"
                 CommandParameter="RCKY02"
                 FontSize="Large"
                 Text="2" />
             <controls:RemoteButtonView
                 Grid.Row="0"
                 Grid.Column="2"
-                Command="{Binding controls:RemoteButtonViewPressedCommand}"
+                Command="{Binding controls:ButtonPressedCommand}"
                 CommandParameter="RCKY03"
                 FontSize="Large"
                 Text="3" />
             <controls:RemoteButtonView
                 Grid.Row="1"
                 Grid.Column="0"
-                Command="{Binding controls:RemoteButtonViewPressedCommand}"
+                Command="{Binding controls:ButtonPressedCommand}"
                 CommandParameter="RCKY04"
                 FontSize="Large"
                 Text="4" />
             <controls:RemoteButtonView
                 Grid.Row="1"
                 Grid.Column="1"
-                Command="{Binding controls:RemoteButtonViewPressedCommand}"
+                Command="{Binding controls:ButtonPressedCommand}"
                 CommandParameter="RCKY05"
                 FontSize="Large"
                 Text="5" />
             <controls:RemoteButtonView
                 Grid.Row="1"
                 Grid.Column="2"
-                Command="{Binding controls:RemoteButtonViewPressedCommand}"
+                Command="{Binding controls:ButtonPressedCommand}"
                 CommandParameter="RCKY06"
                 FontSize="Large"
                 Text="6" />
             <controls:RemoteButtonView
                 Grid.Row="2"
                 Grid.Column="0"
-                Command="{Binding controls:RemoteButtonViewPressedCommand}"
+                Command="{Binding controls:ButtonPressedCommand}"
                 CommandParameter="RCKY07"
                 FontSize="Large"
                 Text="7" />
             <controls:RemoteButtonView
                 Grid.Row="2"
                 Grid.Column="1"
-                Command="{Binding controls:RemoteButtonViewPressedCommand}"
+                Command="{Binding controls:ButtonPressedCommand}"
                 CommandParameter="RCKY08"
                 FontSize="Large"
                 Text="8" />
             <controls:RemoteButtonView
                 Grid.Row="2"
                 Grid.Column="2"
-                Command="{Binding controls:RemoteButtonViewPressedCommand}"
+                Command="{Binding controls:ButtonPressedCommand}"
                 CommandParameter="RCKY09"
                 FontSize="Large"
                 Text="9" />
             <controls:RemoteButtonView
                 Grid.Row="3"
                 Grid.Column="0"
-                Command="{Binding controls:RemoteButtonViewPressedCommand}"
+                Command="{Binding controls:ButtonPressedCommand}"
                 CommandParameter="RCKY10"
                 FontSize="Large"
                 Text="." />
             <controls:RemoteButtonView
                 Grid.Row="3"
                 Grid.Column="1"
-                Command="{Binding controls:RemoteButtonViewPressedCommand}"
+                Command="{Binding controls:ButtonPressedCommand}"
                 CommandParameter="RCKY00"
                 FontSize="Large"
                 Text="0" />
             <controls:RemoteButtonView
                 Grid.Row="3"
                 Grid.Column="2"
-                Command="{Binding controls:RemoteButtonViewPressedCommand}"
+                Command="{Binding controls:ButtonPressedCommand}"
                 CommandParameter="RCKY11"
                 FontSize="Large"
                 Text="ENT" />

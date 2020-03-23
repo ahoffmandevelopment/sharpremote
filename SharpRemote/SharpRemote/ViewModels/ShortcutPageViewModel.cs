@@ -1,5 +1,4 @@
 ﻿using Rg.Plugins.Popup.Events;
-using Rg.Plugins.Popup.Pages;
 using SharpRemote.Models;
 using SharpRemote.Sqlite.Models;
 using SharpRemote.Views;
@@ -67,6 +66,26 @@ namespace SharpRemote.ViewModels
 
         private void GetDefaultButtons()
         {
+            groupedButtons.Add(new RemoteButtonGroup("AV Mode", new List<RemoteButton>
+            {
+                new RemoteButton
+                {
+                    ButtonText = "MOVIE",
+                    CommandText = "AVMD002",
+                    BackgroundColorHex = Color.Accent.ToHex(),
+                    FontColorHex = Color.White.ToHex()
+
+                },
+
+                new RemoteButton
+                {
+                    ButtonText = "USER",
+                    CommandText = "AVMD004",
+                    BackgroundColorHex = Color.Accent.ToHex(),
+                    FontColorHex = Color.White.ToHex()
+
+                }
+            }));
             groupedButtons.Add(new RemoteButtonGroup("Inputs", new List<RemoteButton>
             {
                 new RemoteButton
